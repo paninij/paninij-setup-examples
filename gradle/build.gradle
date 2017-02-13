@@ -1,0 +1,20 @@
+plugins {
+  id 'java'
+  id 'net.ltgt.apt' version '0.9'  // Simplifies use of annotation processors.
+}
+
+description = 'An example of an @PaniniJ program built with Gradle'
+
+repositories {
+  mavenLocal()
+}
+
+dependencies {
+  apt 'org.paninij:proc:0.1.1-SNAPSHOT'     // The annotation processor.
+  compile 'org.paninij:lang:0.1.1-SNAPSHOT' // The annotations & runtime.
+}
+
+task execHelloWorld(type: JavaExec) {
+  classpath = sourceSets.main.runtimeClasspath
+  main = 'ex.HelloWorldCore'
+}
