@@ -1,0 +1,28 @@
+plugins {
+  id 'java'
+  id 'net.ltgt.apt' version '0.9'  // Simplifies use of annotation processors.
+  id 'idea'                        // apt & idea work together to use gen-src.
+}
+
+idea {
+  project {
+    jdkName = '1.8'
+    languageLevel = '1.8'
+  }
+}
+
+description = 'An example of an @PaniniJ program built with Gradle and/or IntelliJ IDEA'
+
+repositories {
+  mavenLocal()
+}
+
+dependencies {
+  apt 'org.paninij:proc:0.1.1-SNAPSHOT'     // The annotation processor.
+  compile 'org.paninij:lang:0.1.1-SNAPSHOT' // The annotations & runtime.
+}
+
+task execHelloWorld(type: JavaExec) {
+  classpath = sourceSets.main.runtimeClasspath
+  main = 'ex.HelloWorldCore'
+}
