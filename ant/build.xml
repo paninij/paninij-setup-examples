@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<project name="Ant-Test" default="main" basedir=".">
+
+  <property name="src.dir" location="src" />
+  <property name="libs.dir" location="libs" />
+  <property name="build.dir" location="build" />
+  <property name="classes.dir" location="${build.dir}/classes" />
+  <property name="gen.src.dir" location="${build.dir}/gen-src" />
+
+  <path id="build.classpath">
+    <fileset dir="${libs.dir}">
+      <include name="**/*.jar" />
+    </fileset>
+  </path>
+
+  <target name="clean">
+    <delete dir="${build.dir}" />
+  </target>
+
+  <target name="makedir">
+    <mkdir dir="${build.dir}" />
+    <mkdir dir="${gen.src.dir}" />
+  </target>
+
+  <target name="classes" depends="clean, makedir">
+    <javac srcdir="${src.dir}" destdir="${build.dir}" classpathref="build.classpath"> 
+      <compilerarg line="-s ${gen.src.dir}"/>
+    </javac>
+  </target>
+
+  <target name="main" depends="classes">
+    <description>Main target</description>
+  </target>
+
+  <!-- TODO: Add an exec target. -->
+
+</project>
