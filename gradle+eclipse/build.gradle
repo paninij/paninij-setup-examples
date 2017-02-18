@@ -11,8 +11,8 @@ repositories {
 }
 
 dependencies {
-  apt 'org.paninij:proc:0.1.1-SNAPSHOT'     // The annotation processor.
-  compile 'org.paninij:lang:0.1.1-SNAPSHOT' // The annotations & runtime.
+  apt 'org.paninij:proc:0.2.1-SNAPSHOT'     // The annotation processor.
+  compile 'org.paninij:lang:0.2.1-SNAPSHOT' // The annotations & runtime.
 }
 
 task execHelloWorld(type: JavaExec) {

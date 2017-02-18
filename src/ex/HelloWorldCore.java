@@ -6,10 +6,10 @@ import org.paninij.lang.Root;
 
 @Root @Capsule
 class HelloWorldCore {
-    public void run() {
+    void run() {
         System.out.println("Hello, world.");
     }
-
+    
     public static void main(String[] args) {
         CapsuleSystem.start(HelloWorld.class, args);
     }
