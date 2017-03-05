@@ -1,5 +1,8 @@
 # `ex-paninij-gradle-eclipse-setup`
 
+The contents of this folder demonstrate how to configure a simple @PaniniJ
+project which can be built with Gradle and developed within Eclipse.
+
 Integration between Gradle and Eclipse is enabled using three tools:
 
 -  Buildship, an Eclipse plugin for Gradle integration (comparable to m2e).
@@ -17,4 +20,5 @@ $ ./gradlew eclipseJdt
 ```
 
 and then use the Eclipse import dialogue to import this project as a "Gradle
-project".
+project". From there, use the "Import Gradle Project" Wizard Dialog. It should
+only be necessary to select "Next" and "Finish".

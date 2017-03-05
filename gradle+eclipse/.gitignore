@@ -1,6 +1,7 @@
 /.gradle/
 /bin/
 /.apt_generated/
+/apt_generated/
 /.classpath
 /.factorypath
 /.project
