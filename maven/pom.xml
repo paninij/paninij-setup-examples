@@ -58,12 +58,12 @@
     <dependency>
       <groupId>org.paninij</groupId>
       <artifactId>proc</artifactId>
-      <version>0.1.1-SNAPSHOT</version>
+      <version>0.2.1</version>
     </dependency>
     <dependency>
       <groupId>org.paninij</groupId>
       <artifactId>lang</artifactId>
-      <version>0.1.1-SNAPSHOT</version>
+      <version>0.2.1</version>
     </dependency>
   </dependencies>
 </project>

@@ -14,12 +14,12 @@ idea {
 description = 'An example of an @PaniniJ program built with Gradle and/or IntelliJ IDEA'
 
 repositories {
-  mavenLocal()
+  mavenCentral()
 }
 
 dependencies {
-  apt 'org.paninij:proc:0.1.1-SNAPSHOT'     // The annotation processor.
-  compile 'org.paninij:lang:0.1.1-SNAPSHOT' // The annotations & runtime.
+  apt 'org.paninij:proc:0.2.1'     // The annotation processor.
+  compile 'org.paninij:lang:0.2.1' // The annotations & runtime.
 }
 
 task execHelloWorld(type: JavaExec) {
